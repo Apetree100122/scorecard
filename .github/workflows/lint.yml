@@ -1,37 +1,39 @@
-name: golangci-lint
+name: "golangci-lint"
 on:
   push:
-    branches:
-      - main
+    branches:  [ "main" ]
   pull_request:
-    branches:
-      - main
-
+    branches:  [ "main" ]
 permissions:
   contents: read
-  pull-requests: read # Use with `only-new-issues` option.
-
-env:
-  GO_VERSION: 1.22
-
+  pull-requests: read 
+      "Use New-issue"
+    env:"GO V1.22"
 jobs:
   golangci:
     name: check-linter
     runs-on: ubuntu-latest
     steps:
-      - uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c # v2.9.0
+      - uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c 
+      # v2.9.0
         with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-      - uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
+          egress-policy: audit
+          # TODO: change to 'egress-policy: block' after couple of runs
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      # v4.1.7
+      - uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 
+      # v5.0.2
         with:
           go-version: ${{ env.GO_VERSION }}
-          cache: false # golangci-lint maintains its own cache
-      - name: set golangci-lint version # keep in sync with tools/go.mod
+          cache: false
+          # golangci-lint maintains its own cache
+      - name: set golangci-lint version 
+      # keep in sync with tools/go.mod
         run: |
           echo "GOLANGCI_LINT_VERSION=$(cd tools; go list -m -f '{{ .Version }}' github.com/golangci/golangci-lint)" >> "$GITHUB_ENV"
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@a4f60bb28d35aeee14e6880718e0c85ff1882e64 # v6.0.1
+        uses: golangci/golangci-lint-action@a4f60bb28d35aeee14e6880718e0c85ff1882e64 
+        # v6.0.1
         with:
           version: ${{ env.GOLANGCI_LINT_VERSION }}
           only-new-issues: true
