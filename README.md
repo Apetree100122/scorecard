@@ -625,18 +625,9 @@ Video Call: [LFX z o o m](https://zoom-lfx.platform.linuxfoundation.org/meeting/
 
 Video Call: [LFX z o o m](https://zoom-lfx.platform.linuxfoundation.org/meeting/93377638314?password=d53af562-d908-4100-8ae1-52686756cc5d)   
 
-#### Agenda
+#### Agenda You can see the [agenda and meeting notes here](https://docs.google.com/document/d/1b6d3CVJLsl7YnTE7ZaZQHdkdYIvuOQ8rzAmvVdypOWM/edit?usp=sharing).
+## Stargazers over time [![Stargazers over time](https://starchart.cc/ossf/scorecard.svg)](https://starchart.cc/ossf/scorecard)
+## FAQ See the [FAQ](docs/faq.md) for answers to Frequently Asked Questions about Scorecard.
 
-You can see the [agenda and meeting notes here](https://docs.google.com/document/d/1b6d3CVJLsl7YnTE7ZaZQHdkdYIvuOQ8rzAmvVdypOWM/edit?usp=sharing).
-
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/ossf/scorecard.svg)](https://starchart.cc/ossf/scorecard)
-
-
-## FAQ
-
-### FAQ
-
-See the [FAQ](docs/faq.md) for answers to Frequently Asked Questions about Scorecard.
+## maintainers note 
+--
